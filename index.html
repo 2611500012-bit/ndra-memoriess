@@ -1,236 +1,53 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>My Memories</title>
-
-    <!-- Menghubungkan CSS -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080709">
+  <meta name="description" content="Halaman suasana untuk The One That Got Away — Katy Perry.">
+  <title>The One That Got Away — Katy Perry</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="rain" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <main class="scene">
+    <div class="eyebrow"><span class="status-dot"></span> A SONG FOR THE ONE WE LOST</div>
+    <header>
+      <p class="artist">KATY PERRY</p>
+      <h1>The One <span>That Got Away</span></h1>
+      <p class="subtitle">Some memories never learn to fade.</p>
+    </header>
 
-    <div class="book-container">
-
-        <div class="book" id="book">
-
-            <!-- ========================= -->
-            <!-- SAMPUL DEPAN -->
-            <!-- ========================= -->
-
-            <div class="page cover">
-
-                <div class="cover-content">
-
-                    <p class="small-title">
-                        MY PERSONAL
-                    </p>
-
-                    <h1>
-                        MEMORIES
-                    </h1>
-
-                    <div class="line"></div>
-
-                    <p class="subtitle">
-                        A collection of moments
-                    </p>
-
-                    <div class="heart">
-                        ♡
-                    </div>
-
-                    <p class="year">
-                        2026
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- ========================= -->
-            <!-- MEMORY 1 -->
-            <!-- ========================= -->
-
-            <div class="page">
-
-                <div class="page-content">
-
-                    <span class="page-number">
-                        01
-                    </span>
-
-                    <div class="photo-frame">
-
-                        <!-- GANTI FOTO DI SINI -->
-                        <img src="images/memory1.jpeg" alt="Memory pertama">
-
-                    </div>
-
-                    <!-- GANTI JUDUL DI SINI -->
-                    <h2>
-                        First Memory
-                    </h2>
-
-                    <!-- GANTI TANGGAL DI SINI -->
-                    <p class="date">
-                        12 September 2026
-                    </p>
-
-                    <!-- GANTI CERITA DI SINI -->
-                    <p class="story">
-                        Sebuah momen sederhana yang
-                        akhirnya menjadi salah satu
-                        kenangan yang ingin disimpan.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- ========================= -->
-            <!-- MEMORY 2 -->
-            <!-- ========================= -->
-
-            <div class="page">
-
-                <div class="page-content">
-
-                    <span class="page-number">
-                        02
-                    </span>
-
-                    <div class="photo-frame">
-
-                        <!-- GANTI FOTO DI SINI -->
-                        <img src="images/memory2.jpeg" alt="Memory kedua">
-
-                    </div>
-
-                    <!-- GANTI JUDUL DI SINI -->
-                    <h2>
-                        A Beautiful Day
-                    </h2>
-
-                    <!-- GANTI TANGGAL DI SINI -->
-                    <p class="date">
-                        15 September 2026
-                    </p>
-
-                    <!-- GANTI CERITA DI SINI -->
-                    <p class="story">
-                        Hari yang mungkin terlihat biasa,
-                        tetapi terasa berbeda ketika
-                        dikenang kembali.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- ========================= -->
-            <!-- MEMORY 3 -->
-            <!-- ========================= -->
-
-            <div class="page">
-
-                <div class="page-content">
-
-                    <span class="page-number">
-                        03
-                    </span>
-
-                    <div class="photo-frame">
-
-                        <!-- GANTI FOTO DI SINI -->
-                        <img src="images/memory3.jpeg" alt="Memory ketiga">
-
-                    </div>
-
-                    <!-- GANTI JUDUL DI SINI -->
-                    <h2>
-                        Another Story
-                    </h2>
-
-                    <!-- GANTI TANGGAL DI SINI -->
-                    <p class="date">
-                        20 September 2026
-                    </p>
-
-                    <!-- GANTI CERITA DI SINI -->
-                    <p class="story">
-                        Beberapa foto tidak hanya
-                        menyimpan gambar, tetapi juga
-                        menyimpan perasaan dan cerita.
-                    </p>
-
-                </div>
-
-            </div>
-
-
-            <!-- ========================= -->
-            <!-- SAMPUL BELAKANG -->
-            <!-- ========================= -->
-
-            <div class="page back-cover">
-
-                <div class="back-content">
-
-                    <div class="heart">
-                        ♡
-                    </div>
-
-                    <h2>
-                        THE END
-                    </h2>
-
-                    <p>
-                        Some memories become stories.
-                        <br>
-                        Some stories become forever.
-                    </p>
-
-                </div>
-
-            </div>
-
+    <section class="player-card" aria-label="Pemutar musik">
+      <div class="record-art" aria-hidden="true"><div class="record"><span></span></div><div class="art-glow"></div></div>
+      <div class="track-meta">
+        <p class="track-label">NOW PLAYING</p>
+        <h2>The One That Got Away</h2>
+        <p>Katy Perry <span class="separator">·</span> Teenage Dream</p>
+      </div>
+      <audio id="audio" preload="metadata">
+        <source src="lirik-marry-chrismash/music.mp3" type="audio/mpeg">
+      </audio>
+      <div class="audio-controls">
+        <button id="playButton" class="play-button" type="button" aria-label="Putar"><span id="playIcon">▶</span></button>
+        <div class="timeline-wrap">
+          <input id="seek" type="range" min="0" max="100" value="0" aria-label="Posisi lagu">
+          <div class="times"><span id="currentTime">0:00</span><span id="duration">0:00</span></div>
         </div>
+        <button id="muteButton" class="icon-button" type="button" aria-label="Bisukan suara">♫</button>
+      </div>
+      <p id="audioNotice" class="audio-notice">Tekan putar untuk mendengarkan. Jika audionya bukan lagu ini, ganti sumber audio di HTML dengan file lagu milik Anda.</p>
+    </section>
 
-
-        <!-- ========================= -->
-        <!-- TOMBOL -->
-        <!-- ========================= -->
-
-        <div class="controls">
-
-            <button id="prev">
-                ←
-            </button>
-
-            <span id="counter">
-                Cover
-            </span>
-
-            <button id="next">
-                →
-            </button>
-
-        </div>
-
-    </div>
-
-
-    <!-- Menghubungkan JavaScript -->
-    <script src="script.js"></script>
-
+    <section class="lyric-card">
+      <div class="section-heading"><span>01 / THE FEELING</span><i></i></div>
+      <h2>For the love that<br>became a <em>memory.</em></h2>
+      <p>Lagu ini mengenang cinta muda yang terasa abadi, lalu berubah menjadi kenangan dan pertanyaan tentang jalan hidup yang tak dipilih.</p>
+      <a href="https://www.katyperry.com/" target="_blank" rel="noopener noreferrer">Explore Katy Perry <span>↗</span></a>
+    </section>
+    <footer><span>LISTEN CLOSELY</span><span>MADE OF MEMORY &amp; MELANCHOLY</span></footer>
+  </main>
+  <script src="script.js"></script>
 </body>
-
 </html>
